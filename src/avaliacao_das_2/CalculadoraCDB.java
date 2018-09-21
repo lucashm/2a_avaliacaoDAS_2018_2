@@ -11,4 +11,9 @@ public class CalculadoraCDB {
 		
 		return resposta;
 	}
+	
+	public double calcularImpostoRenda(double inicial, int dias, double taxa) {
+		
+		return 3.14;
+	}
 }
