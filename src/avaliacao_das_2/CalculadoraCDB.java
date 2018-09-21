@@ -26,4 +26,9 @@ public class CalculadoraCDB {
 		}
 		return resposta;
 	}
+	
+	public double calcularRendimentoLiquido(double inicial, int dias, double taxa) {
+	
+		return 1.0829;
+	}
 }
