@@ -10,8 +10,8 @@ public class TestRendimentoBruto {
 	@Test
 	public void testCadastroUmRendimento() {
 		CalculadoraCDB calc = new CalculadoraCDB();
-		resposta = calc.calcularRendimentoBruto(1000, 60, 8.5);
+		double resposta = calc.calcularRendimentoBruto(1000, 60, 8.5);
 		
-		assertEquals(13.97, resposta);
+		assertEquals(13.97, resposta, 0.01);
 	}
 }
