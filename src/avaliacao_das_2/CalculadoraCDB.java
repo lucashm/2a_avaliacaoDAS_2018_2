@@ -13,7 +13,17 @@ public class CalculadoraCDB {
 	}
 	
 	public double calcularImpostoRenda(double inicial, int dias, double taxa) {
-		
-		return 3.14;
+		double rendimentoBruto = this.calcularRendimentoBruto(inicial, dias, taxa);
+		double resposta = -1;
+		if(dias < 180) {
+			resposta = rendimentoBruto * 0.225;
+		}else if(dias > 180 && dias < 360) {
+			resposta = rendimentoBruto * 0.20;
+		}else if(dias > 360 && dias < 720) {
+			resposta = rendimentoBruto * 0.175;
+		}else {
+			resposta = rendimentoBruto * 0.15;
+		}
+		return resposta;
 	}
 }
