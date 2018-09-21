@@ -28,7 +28,10 @@ public class CalculadoraCDB {
 	}
 	
 	public double calcularRendimentoLiquido(double inicial, int dias, double taxa) {
-	
-		return 1.0829;
+		double rendimentoBruto = this.calcularRendimentoBruto(inicial, dias, taxa);
+		double impostoRenda = this.calcularImpostoRenda(inicial, dias, taxa);
+		double valorLiquido = rendimentoBruto - impostoRenda;
+		double resposta = valorLiquido/inicial * 100;
+		return resposta;
 	}
 }
